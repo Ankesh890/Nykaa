@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup - Nykaa Style</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+
+        header {
+             background: #ff3e6c;
+             color: black;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header .hero p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+ button {
+  display: inline-block;
+  background-color: #ff3366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e60045;
+}
+        .featured {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-card p {
+            font-size: 1.1rem;
+            margin: 10px 0 5px;
+        }
+
+        .product-card span {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .product-card a {
+            text-decoration: none;
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .product-card a:hover {
+            background-color: #ff8a75;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-column {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #ff6f61;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ff8a75;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hero">
+            <h1>Makeup Products</h1>
+            <p>Explore the finest selection of makeup essentials!</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skin.html">Skin</a></li>
+                <li><a href="hair.html">Hair</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Makeup Products Section -->
+    <section class="featured">
+        <h2>Our Top Picks</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Lipstick">
+                <p>Luxe Lipstick</p>
+                <span>₹800</span>
+                <button onclick="addToCart('Luxe Lipstick', 800)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Foundation">
+                <p>Long-Lasting Foundation</p>
+                <span>₹300</span>
+                <button onclick="addToCart('Long-Lasting Foundation', 300)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img style="width: 90%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr5GNSqOfS-dRKGX8f_0QpgNMXmLqjZgeZUg&s" alt="Eyeshadow Palette">
+                <p>Eyeshadow Palette</p>
+                <span>₹350</span>
+                <button onclick="addToCart('Eyeshadow Palette', 350)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Mascara">
+                <p>Volumizing Mascara</p>
+                <span>₹600</span>
+                <button onclick="addToCart('Volumizing Mascara', 600)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Your one-stop shop for all things beauty. We bring the best products to your doorstep.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skin.html">Skin</a></li>
+                    <li><a href="hair.html">Hair</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Nykaa Style. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<script src="makeup.js"></script>
